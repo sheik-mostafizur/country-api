@@ -15,44 +15,8 @@
 
   <main>
     <!-- country list -->
-    <section class="container">
-      <div class="row" id="country_list">
-        <div class="col-3">
-          <div class="card">
-            <img src="https://picsum.photos/id/11/1920/1080" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">United States of America</h5>
-              <p class="card-text">Some quick example text.</p>
-
-              <!-- show more details -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Details
-              </button>
-
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end more details -->
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="container-fluid">
+      <div class="row gy-3 my-4" id="country_list"></div>
     </section>
 
   </main>
@@ -62,6 +26,7 @@
     crossorigin="anonymous"></script>
 
   <!-- custom js -->
+  <script src="./assets/js/countryCard.js"></script>
   <script src="./assets/js/app.js"></script>
 </body>
 
