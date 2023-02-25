@@ -1,3 +1,4 @@
+// single country card
 function countryCard(data) {
   const {
     flags: {png, alt},

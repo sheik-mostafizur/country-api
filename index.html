@@ -12,11 +12,30 @@
 </head>
 
 <body>
-
+  <header class="mt-3 mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <input type="search" class="form-control" id="search" aria-describedby="search" placeholder="Search country">
+        </div>
+        <div class="col-md-4">
+          <select id="filter" class="form-select" aria-label="Filter">
+            <option value="">Filter by region all</option>
+            <option value="africa">Africa</option>
+            <option value="americas">Americas</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+  <hr>
   <main>
     <!-- country list -->
     <section class="container-fluid">
-      <div class="row gy-3 my-4" id="country_list"></div>
+      <div class="row gy-3" id="country_list"></div>
     </section>
 
   </main>
