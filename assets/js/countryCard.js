@@ -17,7 +17,7 @@ function countryCard(data) {
   <img src="${png}" class="card-img-top object-fit-cover" height="180" alt="${alt}">
   <div class="card-body">
     <h5 class="card-title fw-bold">${common}</h5>
-    <p class="card-text"><b>Capital: </b>${capital[0]}</p>
+    <p class="card-text"><b>Capital: </b>${(capital && capital[0]) || ""}</p>
     <p class="card-text"><b>Region: </b>${region}</p>
 
     <!-- show more details -->
@@ -38,7 +38,7 @@ function countryCard(data) {
             <img src="${png}" class="card-img-top" alt="${alt}">
             <hr />
             <h4 class="fw-bold">${common}</h4>
-            <p><b>Capital: </b>${capital[0]}</p>
+            <p><b>Capital: </b>${(capital && capital[0]) || ""}</p>
             <p><b>Region: </b>${region}</p>
             <p><b>Official: </b>${official}</p>
             <p><b>Population: </b>${population}</p>
