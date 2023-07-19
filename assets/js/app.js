@@ -1,10 +1,17 @@
+let isLoading = true;
+const country_list = document.getElementById("country_list");
+country_list.innerHTML = "Loading....";
 // get all country list
 const counters = async (changeUrl) => {
   try {
     const API = `https://restcountries.com/v3.1/${changeUrl}`;
     const fetchData = await fetch(API);
     const data = await fetchData.json();
-    showCountries(data); // send countries data
+
+    isLoading = false;
+    if (!isLoading) {
+      showCountries(data); // send countries data
+    }
   } catch (error) {
     console.log(error.message);
   }
@@ -14,7 +21,7 @@ counters("all");
 // show all countries where id is country_list
 function showCountries(data) {
   // show all countries
-  const country_list = document.getElementById("country_list");
+
   country_list.innerHTML = ""; // clear previous country
   data.forEach((singleData) => {
     country_list.appendChild(countryCard(singleData)); // appending all country
